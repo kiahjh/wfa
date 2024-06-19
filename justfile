@@ -1,8 +1,26 @@
 _default:
   @just --choose
 
-site:
-	@bun --filter 'site' dev
+# infra
+typecheck:
+  @tsc --noEmit --watch
 
+# frontend
+site:
+	@cd packages/site && bun dev
+
+# backend
 api:
-	@bun --filter 'api' dev
+	@cd packages/api && bun dev
+
+gen-migrations:
+  @cd ./packages/api/ && bunx drizzle-kit generate
+
+migrate:
+  @cd ./packages/api/ && bunx drizzle-kit migrate
+
+push-db-changes:
+  @cd ./packages/api/ && bunx drizzle-kit push
+
+drizzle-studio:
+  @cd ./packages/api/ && bunx drizzle-kit studio

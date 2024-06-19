@@ -2,6 +2,7 @@ import { FiArrowRight } from "solid-icons/fi";
 import { createSignal, type Component } from "solid-js";
 import Button from "./Button";
 import TextInput from "./TextInput";
+import signup from "@/lib/api-client/routes/signup";
 
 const SignupForm: Component = () => {
   const [email, setEmail] = createSignal(``);
@@ -12,7 +13,9 @@ const SignupForm: Component = () => {
       class="bg-white/80 px-10 py-14 rounded-3xl shadow-xl shadow-cream-200/20 shrink-0 max-w-md"
       onSubmit={async (e) => {
         e.preventDefault();
-        alert(`Signup form submitted!`);
+        const res = await signup({ email: email(), password: password() });
+
+        console.log(res);
       }}
     >
       <h1 class="text-4xl font-poppins font-semibold text-center">Sign up</h1>
