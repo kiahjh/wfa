@@ -1,16 +1,13 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Wadsworth Folk Academy">
+  <section class="flex flex-col justify-center items-center w-screen h-screen">
+    <h1 class="text-4xl font-medium">Wadsworth Folk Academy</h1>
+    <div class="flex gap-4 mt-4">
+      <a href="/dashboard">Login</a>
+      <a href="/signup">signup</a>
+    </div>
+  </section>
+</BaseLayout>

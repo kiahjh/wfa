@@ -1,0 +1,19 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import BackgroundImg from "../../public/cream-hill.svg";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <div class="min-h-screen w-screen flex justify-around items-center bg-bottom bg-cover" style={`background-image: url("${BackgroundImg.src}")`}>
+    <div class="w-96 h-96 border-2 border-dashed border-cream-200 rounded-3xl flex justify-center items-center text-cream-300 text-lg">
+      <span class="-rotate-45">Illustration</span>
+    </div>
+    <slot />
+  </div>
+</BaseLayout>
