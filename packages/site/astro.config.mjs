@@ -9,5 +9,10 @@ export default defineConfig({
   integrations: [tailwind(), solidJs()],
   output: `server`,
   adapter: vercel(),
+  redirects: {
+    "/dashboard": `/`,
+    "/login": `/`,
+    "/signup": `/`,
+  },
   experimental: {},
 });

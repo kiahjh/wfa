@@ -3,11 +3,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Wadsworth Folk Academy">
-  <section class="flex flex-col justify-center items-center w-screen h-screen">
-    <h1 class="text-4xl font-medium">Wadsworth Folk Academy</h1>
-    <div class="flex gap-4 mt-4">
-      <a href="/dashboard">Login</a>
-      <a href="/signup">signup</a>
-    </div>
+  <section
+    class="w-screen h-screen flex justify-center items-center flex-col text-center bg-cream-50 px-4"
+  >
+    <h1 class="text-2xl font-poppins font-medium">Wadsworth Folk Academy</h1>
+    <p class="text-black/60 max-w-lg mt-2">
+      Music lessons for homeschoolers, ages 10-20. Learn to play with others,
+      improvise, and so much more. Currently offering lessons for banjo,
+      mandolin, and guitar.
+    </p>
   </section>
 </BaseLayout>

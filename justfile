@@ -2,8 +2,14 @@ _default:
   @just --choose
 
 # infra
-typecheck:
-  @tsc --noEmit --watch
+tc-site:
+  @cd packages/site && tsc --noEmit --watch
+
+tc-api:
+  @cd packages/api && tsc --noEmit --watch
+
+tc-types:
+  @cd packages/types && tsc --noEmit --watch
 
 # frontend
 site:

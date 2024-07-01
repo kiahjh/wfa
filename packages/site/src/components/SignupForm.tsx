@@ -10,7 +10,7 @@ const SignupForm: Component = () => {
 
   return (
     <form
-      class="bg-white/80 px-10 py-14 rounded-3xl shadow-xl shadow-cream-200/20 shrink-0 max-w-md"
+      class="bg-white/80 px-10 py-14 rounded-3xl shadow-xl shadow-cream-200/30 shrink-0 max-w-md"
       onSubmit={async (e) => {
         e.preventDefault();
         const res = await signup({ email: email(), password: password() });

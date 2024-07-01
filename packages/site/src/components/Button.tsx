@@ -16,7 +16,7 @@ interface LinkProps {
 interface CommonProps {
   children: JSXElement;
   Icon?: IconTypes;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
   variant?: "primary" | "secondary" | "tertiary";
   disabled?: boolean;
 }
@@ -34,6 +34,8 @@ const Button: Component<Props> = (props) => {
       "text-cream-800 hover:bg-cream-100": props.variant === `tertiary`,
     },
     {
+      "text-xl px-6 py-3 rounded-2xl tracking-[1.5px] gap-3":
+        props.size === `xl`,
       "text-lg px-4 py-2 rounded-xl tracking-[1.5px] gap-3":
         props.size === `lg`,
       "text-base px-3 py-1.5 rounded-lg tracking-[1.3px] gap-2":
@@ -45,6 +47,8 @@ const Button: Component<Props> = (props) => {
 
   const iconSize = (() => {
     switch (props.size || `md`) {
+      case `xl`:
+        return 22;
       case `lg`:
         return 20;
       case `md`:
