@@ -1,22 +1,22 @@
 ---
-import '@fontsource/poppins/100.css';
-import '@fontsource/poppins/200.css';
-import '@fontsource/poppins/300.css';
-import '@fontsource/poppins/400.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/600.css';
-import '@fontsource/poppins/700.css';
-import '@fontsource/poppins/800.css';
-import '@fontsource/poppins/900.css';
-import '@fontsource/poppins/100-italic.css';
-import '@fontsource/poppins/200-italic.css';
-import '@fontsource/poppins/300-italic.css';
-import '@fontsource/poppins/400-italic.css';
-import '@fontsource/poppins/500-italic.css';
-import '@fontsource/poppins/600-italic.css';
-import '@fontsource/poppins/700-italic.css';
-import '@fontsource/poppins/800-italic.css';
-import '@fontsource/poppins/900-italic.css';
+import "@fontsource/poppins/100.css";
+import "@fontsource/poppins/200.css";
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/800.css";
+import "@fontsource/poppins/900.css";
+import "@fontsource/poppins/100-italic.css";
+import "@fontsource/poppins/200-italic.css";
+import "@fontsource/poppins/300-italic.css";
+import "@fontsource/poppins/400-italic.css";
+import "@fontsource/poppins/500-italic.css";
+import "@fontsource/poppins/600-italic.css";
+import "@fontsource/poppins/700-italic.css";
+import "@fontsource/poppins/800-italic.css";
+import "@fontsource/poppins/900-italic.css";
 
 interface Props {
   title: string;
@@ -26,14 +26,17 @@ const { title } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Music lessons for homeschoolers, ages 10-20. Learn to play with others, improvise, and so much more. Currently offering lessons for banjo, mandolin, and guitar."
+    />
     <title>{title}</title>
-	</head>
-	<body>
-    <slot/>
-	</body>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>

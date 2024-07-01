@@ -19,6 +19,7 @@ interface CommonProps {
   size?: "sm" | "md" | "lg" | "xl";
   variant?: "primary" | "secondary" | "tertiary";
   disabled?: boolean;
+  className?: string;
 }
 
 type Props = CommonProps & (ButtonProps | LinkProps | SubmitProps);
@@ -43,6 +44,7 @@ const Button: Component<Props> = (props) => {
       "text-sm px-2.5 py-1 rounded-lg tracking-[1px] gap-1.5":
         props.size === `sm`,
     },
+    props.className,
   );
 
   const iconSize = (() => {
